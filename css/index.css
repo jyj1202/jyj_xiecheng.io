@@ -1,0 +1,230 @@
+body {
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "MicrosoftYahei",
+    STXihei, hei;
+  color: #000;
+  background: #f2f2f2;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* 头部 */
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 540px;
+  min-width: 320px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background-color: #f6f6f6;
+}
+.search {
+  flex: 1;
+  position: relative;
+  padding-left: 25px;
+  width: 310px;
+  height: 26px;
+  line-height: 24px;
+  margin: 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: #666;
+  font-size: 12px;
+}
+.search::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background: url(../images/sprite.png) no-repeat -59px -279px;
+  background-size: 104px auto;
+}
+.user {
+  /* position: relative; */
+  width: 44px;
+  height: 44px;
+  /* background-color: green; */
+  /* color: #2eaae0; */
+  text-align: center;
+  font-size: 12px;
+}
+.user::before {
+  /* position: absolute; */
+  display: block;
+  margin: 2px auto -2px;
+  top: 5px;
+  right: 5px;
+  content: "";
+  width: 23px;
+  height: 23px;
+  background: url(../images/sprite.png) no-repeat -59px -194px;
+  background-size: 104px auto;
+}
+/* 轮播图 */
+.focus {
+  /* height: 75px; */
+  margin-top: 44px;
+  /* background-color: #2eaae0; */
+}
+.focus img {
+  width: 100%;
+  vertical-align: middle;
+}
+/* 导航栏 */
+.local-nav {
+  display: flex;
+  list-style: none;
+  margin: 4px 4px;
+  padding: 0;
+  /* height: 64px; */
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+.local-nav li {
+  flex: 1;
+}
+.local-nav li a {
+  display: flex;
+  height: 64px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+ul li .item-icon {
+  width: 32px;
+  height: 32px;
+  background: url(../images/localnav_bg.png) no-repeat 0 0;
+  background-size: 32px auto;
+}
+
+/* 主导航 */
+nav {
+  margin: 0px 4px 3px;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.nav-common:nth-child(2) {
+  margin: 2px 0;
+}
+.nav-common {
+  display: flex;
+  height: 88px;
+  background-color: #2eaae0;
+}
+.nav-common-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+  background-color: #666;
+}
+.nav-common-item:nth-child(-n + 2) {
+  border-right: 1px solid #fff;
+}
+.nav-common-item a {
+  flex: 1;
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px rgb(0 0 0 / 20%);
+  background-color: #2eaae0;
+}
+.nav-common-item a:nth-child(1) {
+  border-bottom: 1px solid #fff;
+}
+.nav-common-item:nth-child(1) a {
+  border-bottom: 0;
+  background: url(../images/hotel.png) no-repeat center bottom;
+  background-size: 121px auto;
+}
+
+/* 侧导航栏 */
+.subnav-entry {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 4px;
+  padding: 2px 0;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.subnav-entry li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 53px;
+  /* background-color: #2eaae0; */
+}
+.subnav-entry li span:nth-child(1) {
+  margin-top: 8px;
+  width: 28px;
+  height: 28px;
+  background: url(../images/subnav-bg.png) no-repeat;
+  background-size: 28px auto;
+}
+
+/* 销售模块 */
+.sales-box {
+  margin: 4px 4px;
+}
+.sales-hd {
+  position: relative;
+  height: 55px;
+  background-color: #fff;
+}
+.sales-hd h2 {
+  position: relative;
+  font-size: 0;
+}
+.sales-hd h2::after {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  content: "";
+  width: 79px;
+  height: 15px;
+  background: url(../images/hot.png) no-repeat 0 -20px;
+  background-size: 79px auto;
+}
+.sales-hd a {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 3px 20px 3px 10px;
+  background: -webkit-linear-gradient(left, #ff506c, #ff6bc6);
+  border-radius: 15px;
+  color: #fff;
+}
+.sales-hd a::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(45deg);
+}
